@@ -13,6 +13,7 @@ if (( ${+functions[git-info]} )); then
   autoload -Uz add-zsh-hook && add-zsh-hook precmd git-info
 fi
 
+NEWLINE=$'\n'
 PS1='%{%2G╭─%}%B%(!.%F{red]}.%F{green})%n@%m %F{blue}%~${(e)git_info[prompt]}${VIRTUAL_ENV:+" %F{green}%{%G‹%}${VIRTUAL_ENV:t}%{%G›%}"}%f%b
 %{%2G╰─%}%B%(!.#.$)%b '
-RPS1='%T %{%2G─╮%}\n%B%?%b%{%2G─╯%}'
+RPS1='%T %{%2G─╮%}${NEWLINE}%B%?%b%{%2G─╯%}'
