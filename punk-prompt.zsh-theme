@@ -14,7 +14,7 @@ if (( ${+functions[git-info]} )); then
 fi
 
 precmd() {
-  print "%F{red}FUCK%f"
+  print '%F{red}FUCK%f'
 }
 
 PS1='%{%2G╭─%}%B%(!.%F{red]}.%F{green})%n@%m %F{blue}%~${(e)git_info[prompt]}${VIRTUAL_ENV:+" %F{green}%{%G‹%}${VIRTUAL_ENV:t}%{%G›%}"}%f%b
